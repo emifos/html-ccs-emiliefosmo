@@ -1,0 +1,55 @@
+.top-banner{
+    height:35px ;
+    background-color: #0A437A;
+}
+header{
+    background-color: #87adc1;
+}
+footer{
+    background-color: #0A437A;
+    font-family:inter ;
+}
+
+.cta{
+    color: #0A3641;
+    font-family: poppins;
+}
+
+h1,h2{
+    color: #;
+}
+
+h3{
+    color: #0A3641;
+}
+
+p{
+    color: #0A3641;
+}
+
+footer{
+    color: #FFFF;
+}
+
+.headers{
+    font-family: poppins;
+}
+
+.description{
+    font-family:open sans;
+    color: #0A3641;
+}
+
+label{
+    font-family: poppins;
+}
+
+.dropdown{
+    font-family: poppins;
+    color: #00000;
+}
+
+.black-header{
+    color:#000000  ;
+    font-family: poppins;
+}
