@@ -53,3 +53,57 @@ label{
     color:#000000  ;
     font-family: poppins;
 }
+
+.logo{
+    height: auto;
+    width: 100%;
+    min-width: none;
+    max-width: 300px;
+
+}
+
+/* Home page */
+.home-header{
+    background-image: url(../images/home-header.jpg.jpg);
+    height:auto;
+    width:100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: bottom;
+}
+
+.img-products{
+    object-fit: cover;
+    object-position: bottom;
+    height: auto;
+    width: 100%;
+    max-width: 300px;
+    min-width: 100px;
+
+}
+
+/* Products page*/
+
+/* Product details page*/
+.img-details{
+max-width: 450px;
+}
+
+/*Cart page*/
+.img-cart{
+    max-width: 100px;
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+
+}
+
+/* Conformation  page*/
+.logo-confirmation{
+    max-width: 180px;
+    min-width: none;
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+}
