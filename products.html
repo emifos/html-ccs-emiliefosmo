@@ -3,96 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <title>Products</title>
-    <link href="css/styles.css" rel="stylesheet"/>
-    <div class="top-banner"></div>
+    <script src="https://kit.fontawesome.com/6c23741275.js" crossorigin="anonymous"></script>
+    <link href="css/styles.css" rel="stylesheet"/> 
 </head>
 <body>
+    <div class="top-banner"></div>
     <header>
-        <a href="index.html" class="cta">Rainy Days</a>
+            <input type="checkbox" id="hamburger-menu-header"/>
+            <label for="hamburger-menu-header"><i class="fa-solid fa-bars"></i></label>
         <nav>
            <ul>
               <li><a href="products.html" class="cta">Woman</a></li>
               <li><a href="products.html" class="cta">Men</a></li>
-        </ul>
-    </nav>
+           </ul>
+        </nav>
+        <div class="navigation container-logo">
+            <a href="index.html"><img src="images/RainyDays_Logo.png" alt="RainyDays logo, pushing the comfort zone" class="logo"></a>
+          </div>
    </header>
-   <img src="images/RainyDays_Logo.png" alt="RainyDays logo, pushing the comfort zone" class="logo">
+   <section class="small-banner">
+    <div class="small-banner-text">
+       <h4 class=small-banner-text-h4>Buy now Pay later!</h4>
+   </div>
+   </section>
    <main>
-        <label for="gender" class="cta"></label>
-        <select name="gender" id="gender">
-            <option value="" disabled selected hidden>Gender</option>
-            <option value="woman"> Woman</option>
-            <option value="men"> Men</option>
-            
+    <div class="dropdown">
+        <span>Gender</span>
+         <div class="dropdown-content">
+           <div><a href="#">Woman</a></div>
+           <div><a href="#">Men</a></div>
+         </div>
+      </div>
+      <select></select>
         </select>
-        <label for="color" class="cta"></label>
-        <select name="color" id="color">
-            <option value="color" disabled selected hidden>Color</option>
-            <option value="colors"> </option>
+        <div class="dropdown">
+            <span>Color</span>
+             <div class="dropdown-content">
+               <div><a href="#">Blue</a></div>
+               <div><a href="#">Grey</a></div>
+               <div><a href="#">Red</a></div>
+               <div><a href="#">Green</a></div>
+             </div>
+          </div>
 
         <select></select>
-        <label for="size" class="cta"></label>
-        <select name="size" id="size">
-            <option value="" disabled selected hidden>Size</option>
-            <option value="size"> </option>
-        <select></select>
-
+    <div class="dropdown">
+      <span>Size</span>
+       <div class="dropdown-content">
+         <div><a href="#">S</a></div>
+         <div><a href="#">M</a></div>
+         <div><a href="#">L</a></div>
+         <div><a href="#">XL</a></div>
+       </div>
+    </div>
+    <select></select>
         <section>
-            <div>
-                <img src="images/Powershell.jpg.jpg" alt="Red powershell jacket" class="img-products">
+            <section class="container-products">
+            <div class="product-item">
+                <img src="images/Powershell.jpg" alt="Red powershell jacket" class="img-products">
                  <a href="product-detail.html"><h3 class="description">PowerShell</h3></a>
                 <p class="description">Designed for movement and performance, this is the jacket for you.</p>
                 <p class="description">$39.99</p>
-                <a href="cart.html" class="cta">Add to cart</a>
+                <a href="cart.html" class="cta cta-box">Add to cart</a>
             </div>
-            <div>
-                <img src="images/Cloudburst.jpg.jpg" alt="Grey, black and red raincoat with hood" class="img-products">
+            <div class="product-item">
+                <img src="images/Cloudburst.jpg" alt="Grey, black and red raincoat with hood" class="img-products">
                 <a href="product-detail.html"><h3 class="description">CloudBurst</h3></a>
                 <p class="description">Designed to keep the water out and isolate your body.<p>
                 <p class="description">$39.99</p>
-                <a href="cart.html" class="cta">Add to cart</a>
+                <a href="cart.html" class="cta cta-box">Add to cart</a>
             </div>
-            <div>
-                <img src="images/Trailwarm.jpg.jpg" alt=" Dark grey jaccket with white details" class="img-products">
+            <div class="product-item" >
+                <img src="images/Trailwarm.jpg" alt=" Dark grey jaccket with white details" class="img-products">
                 <a href="product-detail.html"><h3 class="description">TrailWarm</h3></a>
-                <pclass="description">Whether you're hiking or simply caught in a downpour.</p>
+                <p class="description">Whether you're hiking or simply caught in a downpour.</p>
                 <p class="description">$49.99</p>
-                <a href="cart.html" class="cta">Add to cart</a>
+                <a href="cart.html" class="cta cta-box">Add to cart</a>
             </div>
-            <div>
-                <img src="images/Hikedry.jpg.jpg" alt="Black rainjacket with white and yellow details " class="img-products">
+            <div class="product-item">
+                <img src="images/Hikedry.jpg" alt="Black rainjacket with white and yellow details " class="img-products">
                 <a href="product-detail.html"><h3 class="description">HikeDry</h3></a>
-                <p class="description">Stay dry and comfortable no matter the weather with our premium rainjackets.</p>
+                <p class="description">Stay dry and comfortable no matter the weather with our rainjackets.</p>
                 <p class="description">$59.99</p>
-                <a href="cart.html" class="cta">Add to cart</a>
+                <a href="cart.html" class="cta cta-box">Add to cart</a>
             </div>
-            <div>
-                <img src="images/Dryrun.jpg.jpg" alt="Dark grey jacket water resistant" class="img-products">
+            <div class="product-item">
+                <img src="images/Dryrun.jpg" alt="Dark grey jacket water resistant" class="img-products">
                 <a href="product-detail.html"><h3 class="description">DryRun</h3></a>
                 <p class="description">Crafted for outdoor enthusiasts, these jackets offer water-resistant.</p>
                 <p class="description">$39.99</p>
-                <a href="cart.html" class="cta">Add to cart</a>
+                <a href="cart.html" class="cta cta-box">Add to cart</a>
             </div>
-            <div>
-                <img src="images/Chillchaser.jpg.jpg" alt="Dark green fleecejacket" class="img-products">
+            <div class="product-item">
+                <img src="images/Chillchaser.jpg" alt="Dark green fleecejacket" class="img-products">
                 <a href="product-detail.html"><h3 class="description">ChillChaser</h3></a>
                 <p class="description">Whether you're hiking or simply caught in a downpour.<p>
                 <p class="description">$49.99</p>
-                <a href="cart.html" class="cta">Add to cart</a>
+                <a href="cart.html" class="cta cta-box">Add to cart</a>
             </div>
+            </section>
     </section>
     </main>
     <footer>
-        <ul>
-            <li>RaynyDays AS</li>
+        <ul class="footer-text">
+            <li>RainyDays AS</li>
             <li>About us</li>
             <li>Contact information</li>
             <li>Customer service</li>

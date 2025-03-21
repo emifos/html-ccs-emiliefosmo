@@ -3,34 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
     <link rel="manifest" href="favicon/site.webmanifest">
-    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="manifest" href="/site.webmanifest">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Product-detail</title>
+    <script src="https://kit.fontawesome.com/6c23741275.js" crossorigin="anonymous"></script>
     <link href="css/styles.css" rel="stylesheet"/>
-    <div class="top-banner"></div>
 </head>
 <body>
+    <div class="top-banner"></div>
     <header>
-        <a href="index.html" class="cta">Rainy Days</a>
+            <input type="checkbox" id="hamburger-menu-header"/>
+            <label for="hamburger-menu-header"><i class="fa-solid fa-bars"></i></label>
+
         <nav>
             <ul>
                 <li><a href="products.html" class="cta">Woman</a></li>
                 <li><a href="products.html" class="cta">Men</a></li>
             </ul>
         </nav>
+        <div class="navigation container-logo">
+            <a href="index.html"><img src="images/RainyDays_Logo.png" alt="RainyDays logo, pushing the comfort zone" class="logo"></a>
+          </div>
+
     </header>
-    <img src="images/RainyDays_Logo.png" alt="RainyDays logo, pushing the comfort zone" class="logo">
     <main>
-        <section>
-            <img src="images/Powershell.jpg.jpg" alt="Red powershell jacket " class="img-products img-details">
+        <div class="main-container">
+          <img src="images/Powershell.jpg" alt="Red powershell jacket " class="img-products img-details">
+          <div class="details-container">
+            <div class="product-head">
           <h2 class="description">PowerShell</h2>
           <h3 class="description">$39.99</h3>
+           </div>
+
+          <div class="options">
           <h4 class="description">Size</h4>
            <label>
             <input type="radio" name="group" value="option1" >S
@@ -57,20 +68,34 @@
             <label>
             <input type="radio" name="group" value="option1">Green
             </label>
-            </section>
+           </div>
              <div>
-                <a href="cart.html" class="cta">Add to cart</a>
+                <a href="cart.html" class="cta cta-box">Add to cart</a>
              </div>
-              <label class="dropdown" for="dropdown">Description</label>
-              <select></select>
-              <label  class="dropdown" for="dropdown">Details</label>
-              <select></select>
-              <label  for="dropdown">Delivery and return</label>
-              <select></select>
+
+             <form>
+                <details class="dropdown product-detail">
+                    <summary>Description</summary>
+                    <p>Designed for movement and performance, waterproof and warm. Elevate your adventure with our sporty jacket — lightweight, breathable, and built to move with you. Whether you're hiking rugged trails or running through the city, stay protected without compromising on comfort or style.</p></details>
+
+                <details class="dropdown product-detail">
+                    <summary>Detail</summary>
+                    <p>Brand: Rainydays
+                        Color: Red
+                        Item number: 657890-0001</p></details>
+
+                <details class="dropdown product-detail">
+                    <summary>Delivery and return</summary>
+                    <p>We strive to make your shopping experience seamless. All orders are processed within 1-3 business days, and delivery times vary based on your location. You can track your order through our website to stay updated.
+                    Open return for 30 days.</p></details>
+            
+             </form>
+            </div>
+        </div>      
     </main>
     <footer>
-        <ul>
-            <li>RaynyDays AS</li>
+        <ul class="footer-text">
+            <li>RayinyDays AS</li>
             <li>About us</li>
             <li>Contact information</li>
             <li>Customer service</li>

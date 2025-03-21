@@ -3,45 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-    <link rel="manifest" href="favicon/site.webmanifest">
-    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>confirmation</title>
+    <script src="https://kit.fontawesome.com/6c23741275.js" crossorigin="anonymous"></script>
     <link href="css/styles.css" rel="stylesheet"/>
-    <div class="top-banner"></div>
 </head>
 <body>
+    <div class="top-banner"></div>
     <header>
-        <img src="images/RainyDays_Logo.png" alt="RainyDays logo, pushing the comfort zone" class="logo">
-        <a href="index.html" class="cta">Rainy Days</a>
+            <input type="checkbox" id="hamburger-menu-header"/>
+            <label for="hamburger-menu-header"><i class="fa-solid fa-bars"></i></label>
         <nav>
             <ul>
                 <li><a href="products.html" class="cta">Woman</a></li>
                 <li><a href="products.html" class="cta">Men</a></li>
             </ul>
         </nav>
+        <div class="navigation container-logo">
+            <a href="index.html"><img src="images/RainyDays_Logo.png" alt="RainyDays logo, pushing the comfort zone" class="logo"></a>
+          </div>
+        </section>
     </header>
+    <section class="small-banner">
+        <div class="small-banner-text">
+           <h4 class=small-banner-text-h4>Buy now Pay later!</h4>
+       </div>
+       </section>
+
     <main>
         <section>
+            <div class=confirmation-items>
             <h2 class="black-header">Thank you for your order!</h2>
-            <p class="description">
+            <section class="container-confirmation">
+            <p class="description thank-you">
                 Thank you for placing a order. We are getting started on your order right away, you will get a confirmation email in a few minutes. 
             </p>
-            <p class="description">Hope to see you back soon!
+            <p class="description text-end">Hope to see you back soon!
             </p>
-            <img src="images/RainyDays_Logo.png" alt="RainyDays logo, pushing the comfort zone" class="logo logo-confirmation">
-            <a href="order" class="cta">View order</a>
-            
+            <div class=logo-confirmation>
+            <img src="images/RainyDays_Logo.png" alt="RainyDays logo, pushing the comfort zone" class="logo-confirmation ">
+            </div>
+            <div class=view-order>
+            <a href="order" class="cta cta-box view-cta">View order</a>
+        </div>
+            </div>
+        </section>
         </section>
     </main>
     <footer>
-        <ul>
-            <li>RaynyDays AS</li>
+        <ul class="footer-text">
+            <li>RainyDays AS</li>
             <li>About us</li>
             <li>Contact information</li>
             <li>Customer service</li>
