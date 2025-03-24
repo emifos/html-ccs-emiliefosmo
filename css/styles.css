@@ -183,7 +183,7 @@ label, .dropdown{
     background-size:cover;
     background-repeat: no-repeat;
     background-position-x: right;
-    background-position-y: bottom;
+    background-position-y: center;
     min-height: 650px;
     position: relative;
     margin-top: 5px;
@@ -643,7 +643,6 @@ summary{
   
 
     .home-header{
-        background-image: url(/images/red-mountain.jpg);
         background-position: center;
         background-size: cover;
         margin: 5px;
