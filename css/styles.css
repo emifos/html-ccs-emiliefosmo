@@ -17,10 +17,27 @@ header{
     
     
 }
+
+.icons{
+    display: flex;
+    margin-left: auto;
+    margin-right: 10px;    
+    margin-top: 10px;
+   
+}
+
+.fa-heart, .fa-magnifying-glass, .fa-cart-shopping, .fa-user{
+    padding: 10px;
+    color: #0A3641;
+    
+    
+}
+
 footer{
     background-color: #0A437A;
     font-family:inter;
     color: #FFFF;
+    
     
 }
 
@@ -29,11 +46,19 @@ footer{
     display: flex;
     padding: 0px;
     margin: 0;
+    
 }
 .footer-text li{
     margin-top: 30px;
     margin-bottom: 30px;
     padding: 10px 30px;
+    text-decoration: none;
+    
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
 }
 
 .footer-text li:last-child{
@@ -59,15 +84,13 @@ footer{
 }
 
 
-
-
 p{
     color: #0A3641;
 }
 
 nav{
-    margin-left:20px;
-    display:none;
+    margin-left:0px;
+    display:block;
     position:absolute;
 
 }
@@ -96,16 +119,13 @@ nav li:hover {
     text-decoration: none;
 }
 
-label{
+label, .dropdown{
     font-family: poppins;
 }
 
-.dropdown{
-    font-family: poppins;
-}
 
 .black-header{
-    color:#000000  ;
+    color:#000000;
     font-family: poppins;
 }
 
@@ -137,7 +157,37 @@ label{
     
 }
 
+.coming-soon{
+    font-family: poppins;
+    font-size: 40px;
 
+}
+
+.icons-footer{
+    display: flex;
+    margin-left: auto;
+    margin-right: 40px;
+    margin-top:25px;
+
+}
+
+.icons-footer i{
+    font-size: 30px;
+}
+.fa-facebook-f, .fa-instagram{
+    padding: 10px;
+    
+    
+}
+
+.heart-products{
+    padding-left: 50%;
+    font-size: 20px;
+}
+
+.heart-products-detail{
+    font-size: 25px;
+}
 
 /* Home page */
 .home-header{
@@ -148,7 +198,7 @@ label{
     background-position-y: bottom;
     min-height: 650px;
     position: relative;
-    margin-top: 50px;
+    margin-top: 5px;
 }
 
 .header-text{
@@ -195,23 +245,9 @@ label{
 
 }
 
-.container-home{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-}
-
-.item{
-    display: grid;
-    flex:1;
-    padding: 20px;
-    margin: 10px;
-    text-align: center;
-}
-
 .h3{
     padding-left: 50px;
     
-
 }
 
 
@@ -240,17 +276,13 @@ label{
     text-align: left;
     margin-left: 50px;
     margin-top: 40px;
+    border: 1px solid #CCDCE5;
     
 }
 
-.product-head{
-    margin-left: 0px;
-    background-color: #CCDCE5
-
-}
-
-.options{
-    margin: 10px;
+.product-head, .options{
+    margin:10px;
+    
 }
 
 
@@ -267,8 +299,9 @@ label{
 
 
 .cart-header{
-    padding: 10px;
-    margin:10px;
+    padding-bottom: 0px;
+    padding-top: 20px;
+    margin-left: 30px;
     
 }
 
@@ -297,8 +330,6 @@ label{
     background-color:#CCDCE5;
     padding: 15px;
     margin: 10px;
-    display: grid;
-    grid-template-columns: 1fr;
    
 }
 
@@ -306,6 +337,7 @@ label{
     padding: 10px;
     margin:10px;   
     grid-column: span 2;
+    
 } 
 
 .shipping-info-text{
@@ -313,12 +345,19 @@ label{
     margin:10px;  
     display: grid;
     grid-template-columns:repeat(3, 1fr);
+
 } 
 
 .free-shipping, .fast-delivery, .free-returns{
     padding: 10px;
-    text-align: left;
+    text-align: center;
+    
 
+}
+
+.fa-box-open, .fa-truck, .fa-envelope{
+    font-size: 20px;
+    color: #0A3641;
 }
 /* Payment page*/
 
@@ -436,6 +475,7 @@ label{
     display:none;
     position:absolute;
     background-color: #f9f9f9;
+    color: #0A3641;
     min-width: 100px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0,2) ;
     padding: 12px 16px;
@@ -464,13 +504,21 @@ select{
     
 }
 
-.product-item {
+.product-item, .item {
  border: 1px solid #ECF2F5;
  padding: 20px;
  text-align: center;
  
-
 }
+
+.container-home{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1800px;
+    margin: 50px auto;
+    gap: 20px;
+}
+
 
 .img-products{
     width: 100%;
@@ -491,6 +539,16 @@ summary{
     flex-shrink: 0;
 }
 
+#hamburger-menu-header{
+    display: none;
+}
+
+
+
+#hamburger-menu-header{
+    display: none;
+}
+
 
 
 @media (max-width:599px){
@@ -501,9 +559,12 @@ summary{
     
     }
 
-   
 
     .top-banner{
+        display: none;
+    }
+
+    .icons{
         display: none;
     }
 
@@ -674,10 +735,10 @@ summary{
 
   
  .main-container{
-    border: 1px solid #CCDCE5;
+     border: 1px solid #CCDCE5;
      display: grid;
-     padding: 0px;
-     margin: 0px;
+     padding: 10px;
+     
      align-items: center;
      
      
@@ -686,11 +747,13 @@ summary{
  
  .details-container{
      display: grid;
-     grid-template-columns: 1fr;
+     grid-template-columns: 1fr ;
      align-items: right;
      text-align: left;
      margin-left: 0px;
      margin-top: 0px;
+     border: none;
+    
    
      
  }
@@ -781,20 +844,9 @@ summary{
 
 @media (min-width:600px) and (max-width:899px){
 
-    header{
-        padding: 20px;
-        padding-bottom: 0px;
-        background-color: #FFFF;
-    }
-    
-    .top-banner{
-        display: none;
-    }
-
+  
     .small-banner{
-        background-color: #0A3641;
-        height: 30px;
-        margin: 5px;
+        display: none;
         
     }
 
@@ -816,25 +868,21 @@ summary{
     }
     .logo{
         max-width: 200px;
-        padding: 40px;
+        padding: 10px;
+        align-items: center;
     }
+
     nav{
-        display:none;
+        display:block;
+        
     }
 
-
-    #hamburger-menu-header{
-        display: block;
-    }
-
-    #hamburger-menu-header:checked ~ nav{
-        display: block;
-    }
-
-    header label{
+    .fa-bars{
         display: none;
     }
 
+
+    
     .home-header{
         background-position: center;
         min-height: 600px;
@@ -863,7 +911,6 @@ summary{
     }
 
     .footer-text{
-        background-color: #0A3641 ;
         flex-direction: row;
         align-items: center;
         padding-left: 40px;
@@ -889,7 +936,7 @@ summary{
         display: none;
     }
 
-    .fa-solid, .fa-bars{
+    .fa-bars{
         display: none;
     }
 }
@@ -902,16 +949,7 @@ summary{
         display: none;
     }
 
-    #hamburger-menu-header{
-        display: none;
-    }
-
-    nav{
-        display: block;
-
-    }
-
-    .fa-solid, .fa-bars{
+    .fa-bars{
         display: none;
     }
 
