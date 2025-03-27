@@ -648,6 +648,12 @@ summary{
         max-width: 100%;
     }
 
+    footer{
+        display: block;
+        background-color: #0A3641 ;
+
+    }
+    
     .footer-text{
         background-color: #0A3641 ;
         flex-direction: column;
@@ -658,6 +664,7 @@ summary{
     .footer-text li{
         margin: 10px 0;
     }
+
 
     .h3{
         font-size: 25px;
@@ -670,7 +677,7 @@ summary{
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(auto-fill, minmax (100px, 1fr));
-    max-width: 1500px;
+    max-width: 100%;
     margin: 50px auto;
     gap: 20px;
    }
@@ -679,6 +686,10 @@ summary{
     padding: 10px 30px;
     margin-left: 15px;
     margin-top: 20px;
+   }
+
+   .img-products{
+    max-width: 200px;
    }
 
    .img-details{
@@ -768,13 +779,17 @@ summary{
 }
 
 .check-out-container{
-    align-items: center;
-    padding:5px;
+    padding:10px 2px;
+    margin: 10px;
+    background-color:#ECF2F5;
+    max-height: 100px;
+    
+    
 }
 
 .confirmation-items{
-    padding: 10px;
-    margin:0px 10px;
+    padding: 5px;
+    margin:5px 5px;
 }
 
  
