@@ -1,11 +1,12 @@
 .top-banner{
-    height:35px ;
+    height: 35px;
     background-color: #0A437A;
 }
 
 .small-banner{
     background-color: #0A3641;
 }
+
 header{
     display: flex;
     align-items: center;
@@ -14,8 +15,6 @@ header{
     padding-top: 20px;
     padding-bottom: 30px;
     position: relative;
-    
-    
 }
 
 .icons{
@@ -23,14 +22,11 @@ header{
     margin-left: auto;
     margin-right: 10px;    
     margin-top: 10px;
-   
 }
 
 .fa-heart, .fa-magnifying-glass, .fa-cart-shopping, .fa-user{
     padding: 10px;
-    color: #0A3641;
-    
-    
+    color: #0A3641;   
 }
 
 footer{
@@ -44,14 +40,13 @@ footer{
     display: flex;
     padding: 0px;
     margin: 0;
-    
 }
+
 .footer-text li{
     margin-top: 30px;
     margin-bottom: 30px;
     padding: 10px 20px;
-    text-decoration: none;
-    
+    text-decoration: none;   
 }
 
 a{
@@ -62,7 +57,6 @@ a{
 .footer-text li:last-child{
     margin-right: 0;;
 }
-
 
 .cta{
     color: #0A3641;
@@ -81,7 +75,6 @@ a{
     text-decoration: none;
 }
 
-
 p{
     color: #0A3641;
 }
@@ -90,7 +83,6 @@ nav{
     margin-left:0px;
     display:block;
     position:absolute;
-
 }
 
 nav li{
@@ -131,7 +123,6 @@ label, .dropdown{
 .navigation{
     display: flex;
     justify-content: center;
-
 }
 
 .container-logo{
@@ -143,9 +134,8 @@ label, .dropdown{
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
-    
-    
 }
+
 .logo{
     height: auto;
     width: 100%;
@@ -158,14 +148,11 @@ label, .dropdown{
 .coming-soon{
     font-family: poppins;
     font-size: 40px;
-
 }
 
 
 .fa-facebook-f, .fa-instagram{
     font-size: 20px;
-    padding;
-    
 }
 
 .heart-products{
@@ -176,6 +163,7 @@ label, .dropdown{
 .heart-products-detail{
     font-size: 25px;
 }
+
 
 /* Home page */
 .home-header{
@@ -195,7 +183,6 @@ label, .dropdown{
     right: 30%;
     transform: translate(50%, 50%);
     text-align: right;
-    
 }
 
 .headers{
@@ -209,6 +196,7 @@ label, .dropdown{
 .h1-one{
     font-size: 48px;
 }
+
 .h2-one{
     font-size: 38px;
     margin-top: 0px;
@@ -221,8 +209,6 @@ label, .dropdown{
     font-size: 24px;
 }
 
-
-
 .img-products{
     object-fit: cover;
     object-position: bottom;
@@ -230,12 +216,10 @@ label, .dropdown{
     width: 100%;
     max-width: 300px;
     min-width: 100px;
-
 }
 
 .h3{
     padding-left: 50px;
-    
 }
 
 
@@ -253,7 +237,6 @@ label, .dropdown{
     display: flex;
     align-items:center;
     padding: 50px;
-    
 }
 
 
@@ -265,12 +248,10 @@ label, .dropdown{
     margin-left: 50px;
     margin-top: 40px;
     border: 1px solid #CCDCE5;
-    
 }
 
 .product-head, .options{
     margin:10px;
-    
 }
 
 
@@ -285,12 +266,10 @@ label, .dropdown{
     margin: 20px;
 }
 
-
 .cart-header{
     padding-bottom: 0px;
     padding-top: 20px;
     margin-left: 30px;
-    
 }
 
 
@@ -303,29 +282,21 @@ label, .dropdown{
     border: 2px solid #CCDCE5;
 }
 
-
-
 .jacket, .product-pricing, .price-item-1, .price-item-2{
     padding: 10px;
     margin:10px;
-    
-
 }
-
-
 
 .order-summary{
     background-color:#CCDCE5;
     padding: 15px;
     margin: 10px;
-   
 }
 
 .shipping-info{
     padding: 10px;
     margin:10px;   
-    grid-column: span 2;
-    
+    grid-column: span 2;   
 } 
 
 .shipping-info-text{
@@ -333,20 +304,19 @@ label, .dropdown{
     margin:10px;  
     display: grid;
     grid-template-columns:repeat(3, 1fr);
-
 } 
 
 .free-shipping, .fast-delivery, .free-returns{
     padding: 10px;
     text-align: center;
-    
-
 }
 
 .fa-box-open, .fa-truck, .fa-envelope{
     font-size: 20px;
     color: #0A3641;
 }
+
+
 /* Payment page*/
 
 .input-fields{
@@ -367,7 +337,6 @@ label, .dropdown{
     gap: 20px;
     padding: 70px;
     background-color:#ECF2F5;
-    
 }
 
 .check-out-inputs{
@@ -384,6 +353,7 @@ label, .dropdown{
     margin-left: -2px;
 }
 
+
 /* Conformation  page*/
 
 .container-confirmation{
@@ -393,7 +363,6 @@ label, .dropdown{
     margin:20px;
     justify-content: center;
     padding-bottom: 0px 20px 20px 20px;
-
 }
 
 .thank-you{
@@ -421,20 +390,16 @@ label, .dropdown{
    padding: 50px;
    margin: 10px;
    text-align: center;
-
-
 }
 
 .view-order{
-    text-align: center;
-    
+    text-align: center;    
 }
 
 .view-cta{
     padding: 10px 60px;
     color: #FFFF;
 }
-
 
 .text-end{
     padding:10px;
@@ -454,10 +419,7 @@ label, .dropdown{
     border-radius: 8px;
     margin:40px 5px 10px 5px;
     
-
 }
-
-
 
 .dropdown-content{
     display:none;
@@ -479,23 +441,19 @@ select{
     display: none;
 }
 
-
-
 .container-products{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(auto-fill, minmax (100px, 1fr));
     max-width: 1800px;
     margin: 50px auto;
-    gap: 20px;
-    
-    
+    gap: 20px;  
 }
 
 .product-item, .item {
- border: 1px solid #ECF2F5;
- padding: 20px;
- text-align: center;
+    border: 1px solid #ECF2F5;
+    padding: 20px;
+    text-align: center;
  
 }
 
@@ -509,16 +467,15 @@ select{
 
 
 .img-products{
-    width: 100%;
-    
+    width: 100%;   
 }
 
 .product-detail{
     background-color:#FFFF;
     color: #000000;
     padding: 10px;
-
 }
+
 summary{
     display:;
     cursor: pointer;
@@ -531,8 +488,6 @@ summary{
     display: none;
 }
 
-
-
 #hamburger-menu-header{
     display: none;
 }
@@ -543,10 +498,9 @@ summary{
 
    
     .container-home{
-    grid-template-columns: 1fr;
+       grid-template-columns: 1fr;
     
     }
-
 
     .top-banner{
         display: none;
@@ -560,7 +514,6 @@ summary{
         background-color: #0A3641;
         height: 30px;
         margin: 5px;
-        
     }
 
     .small-banner-text-h4{
@@ -573,8 +526,6 @@ summary{
         padding: 6px;
         letter-spacing: 1px;
     }
-
-
 
     header{
         background-color: #FFFF;
@@ -593,21 +544,18 @@ summary{
         max-width: 150px;
     }
 
-
     #hamburger-menu-header{
         display: block;
     }
 
     #hamburger-menu-header:checked ~ nav{
-        display: block;
-        
+        display: block;  
     }
 
     #hamburger-menu-header{
         display: none;
     }
 
-    
     nav{
         display:none;
         position: absolute;
@@ -617,8 +565,7 @@ summary{
         list-style: none;
         padding: 10px;
         text-align: center;
-        display: block;
-        
+        display: block;  
     }
 
     nav li {
@@ -639,8 +586,6 @@ summary{
     nav li:hover {
         background-color:#CCDCE5 ;
     }
-
-  
 
     .home-header{
         background-position: center;
@@ -693,8 +638,6 @@ summary{
         margin: 0px;
     }
 
-   
-
    .container-products{
     display: grid;
     grid-template-columns: 1fr;
@@ -710,26 +653,19 @@ summary{
     margin-top: 20px;
    }
 
-
    .img-details{
     max-width: 200px;
     margin-left: 0px;
     margin-left: 50px;
     padding: 0px;
-    
-
    }
 
-  
  .main-container{
      border: 1px solid #CCDCE5;
      display: grid;
      padding: 10px;
-     align-items: center;
-     
-     
+     align-items: center;  
  }
- 
  
  .details-container{
      display: grid;
@@ -738,10 +674,7 @@ summary{
      text-align: left;
      margin-left: 0px;
      margin-top: 0px;
-     border: none;
-    
-   
-     
+     border: none; 
  }
  
  .product-head{
@@ -749,14 +682,12 @@ summary{
      background-color:white;
      padding: 0px;
      font-size: 15px;
- 
  }
  
  .options{
     display: grid;
     grid-template-columns: 1fr;
-    margin-left:10px;
-    
+    margin-left:10px;  
  }
  
  .dropdown, .product-detail{
@@ -764,8 +695,6 @@ summary{
     margin: 5px;
     padding:10px;
  }
- 
-
 
    .cart-container{
     display: grid;
@@ -774,14 +703,11 @@ summary{
     margin: 20px;
 }
 
-
 .cart-header{
     padding: 10px;
     margin:10px;
-    text-align: center;
-    
+    text-align: center; 
 }
-
 
 .product-details{
     display: grid;
@@ -802,7 +728,6 @@ summary{
     margin: 0px;
 }
 
-
 .shipping-info-text{
     padding: 0px;
     margin:10px;  
@@ -812,7 +737,6 @@ summary{
 
 .order-summary{
     font-size: 12px;
-
 }
 
 .check-out-container{
@@ -832,8 +756,7 @@ summary{
 
   
     .small-banner{
-        display: none;
-        
+        display: none;   
     }
 
     .small-banner-text-h4{
@@ -852,6 +775,7 @@ summary{
         left: 50%;
         transform: translate(-50%);
     }
+
     .logo{
         max-width: 200px;
         padding: 10px;
@@ -859,16 +783,13 @@ summary{
     }
 
     nav{
-        display:block;
-        
+        display:block;    
     }
 
     .fa-bars{
         display: none;
     }
 
-
-    
     .home-header{
         background-position: center;
         min-height: 600px;
@@ -892,20 +813,17 @@ summary{
     .home-cta{
         font-size: 22px;
         padding:15px 15px;
-        position:sticky;
-        
+        position:sticky;   
     }
 
     .footer-text{
         flex-direction: row;
-        align-items: center;
-        
+        align-items: center;  
     }
 
     .img-details{
         margin-left: 0px;
         max-width: 280px;
-
     }
 
     .details-container{
