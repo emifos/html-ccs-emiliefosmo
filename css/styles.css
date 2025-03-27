@@ -36,6 +36,8 @@ footer{
     left: 0;
     bottom: 0;   
     width: 100%;
+    display: flex;
+    justify-content: space-between;
 }
 
 .footer-text{
@@ -52,6 +54,17 @@ footer{
     text-decoration: none;   
 }
 
+.icons-footer{
+    margin-left: auto;
+    margin-top: 30px;
+    margin-right: 10px;
+    padding: 10px 20px;
+}
+
+.fa-facebook-f, .fa-instagram{
+    font-size: 20px;
+    margin-left: 10px;
+}
 a{
     text-decoration: none;
     color: inherit;
@@ -154,10 +167,6 @@ label, .dropdown{
 }
 
 
-.fa-facebook-f, .fa-instagram{
-    font-size: 20px;
-}
-
 .heart-products{
     padding-left: 50%;
     font-size: 20px;
@@ -171,6 +180,10 @@ main{
     min-height: 100vh;
 }
 
+body{
+    margin:0;
+    padding:0;
+}
 
 /* Home page */
 .home-header{
@@ -181,7 +194,7 @@ main{
     background-position-y: center;
     min-height: 650px;
     position: relative;
-    margin-top: 5px;
+    margin-top:0px;
 }
 
 .header-text{
@@ -351,6 +364,7 @@ main{
     gap: 20px;
     padding: 70px;
     background-color:#ECF2F5;
+    
 }
 
 .check-out-inputs{
