@@ -267,6 +267,7 @@ label, .dropdown{
     grid-template-columns: 2fr 1fr;
     gap: 20px;
     margin: 20px;
+    min-height: 200px;
 }
 
 .cart-header{
@@ -347,6 +348,7 @@ label, .dropdown{
     gap: 20px;
     padding: 70px;
     background-color:#ECF2F5;
+    min-height: 300px;
 }
 
 .check-out-inputs{
