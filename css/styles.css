@@ -32,7 +32,10 @@ header{
 footer{
     background-color: #0A437A;
     font-family:inter;
-    color: #FFFF;   
+    color: #FFFF;
+    left: 0;
+    bottom: 0;   
+    width: 100%;
 }
 
 .footer-text{
@@ -316,6 +319,13 @@ label, .dropdown{
     color: #0A3641;
 }
 
+.input-fields-cart{
+    width: 40px;
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid #0A3641;
+    
+}
 
 /* Payment page*/
 
