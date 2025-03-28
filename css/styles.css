@@ -163,9 +163,8 @@ label, .dropdown{
 
 .coming-soon{
     font-family: poppins;
-    font-size: 40px;
+    font-size: 30px;
 }
-
 
 .heart-products{
     padding-left: 50%;
@@ -271,7 +270,7 @@ body{
 }
 
 .product-head, .options{
-    margin:10px;
+    margin:10px ;
 }
 
 
