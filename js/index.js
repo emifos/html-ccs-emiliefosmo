@@ -24,7 +24,7 @@ try {
         image.src = product.image.url
         image.alt = product.image.alt
         title.textContent = product.title
-        price.textContent = product.price
+        price.textContent = `$${product.price}`
         anchor.href = `product-detail.html?id=${product.id}`
 
         content.appendChild(title)
