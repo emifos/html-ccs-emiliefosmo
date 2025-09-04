@@ -1,11 +1,23 @@
 const container = document.querySelector("#container")
+const genderFilter = document.querySelector("#genderFilter")
 const API_URL = "https://v2.api.noroff.dev/rainy-days"
+let allProducts = []
 
 async function fetchAndCreateProducts() {
 try {
     const response = await fetch (API_URL);
     const data = await response.json();
-    const products = data.data
+    allProducts = data.data
+
+   renderProducts(allProducts)
+}   catch(error) {
+    console.error("Failed to fetch products", error)
+    container.textContent = 'Failed to load product'
+    }
+}
+
+function renderProducts (products) {
+    container.innerHTML = ""
 
     products.forEach(product => {
         const card = document.createElement("div")
@@ -35,11 +47,17 @@ try {
 
         container.appendChild(anchor)
     })
-}   catch(error) {
-    console.error("Failed to fetch products", error)
-    container.textContent = 'Failed to load product'
-    }
 }
+
+genderFilter.addEventListener("change", () => {
+    const selected = genderFilter.value
+    if (selected === "all"){
+        renderProducts(allProducts)
+    } else {
+        const filtered = allProducts.filter(p => p.gender === selected)
+        renderProducts(filtered)
+    }
+})
 
 fetchAndCreateProducts()
 

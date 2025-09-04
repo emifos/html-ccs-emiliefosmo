@@ -245,7 +245,6 @@ body{
 }
 
 
-
 /* Product details page*/
 .img-details{
 
@@ -467,7 +466,11 @@ body{
 }
  
 select{
-    display: none;
+    margin: 10px 20px;
+    padding: 5px;
+    font-family: poppins;
+    font-size: 1em;
+
 }
 
 .container-products{
