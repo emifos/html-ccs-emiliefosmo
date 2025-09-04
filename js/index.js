@@ -42,3 +42,8 @@ try {
 }
 
 fetchAndCreateProducts()
+
+
+
+
+
