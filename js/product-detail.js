@@ -20,6 +20,8 @@ async function fetchAndCreateProduct() {
         const price = document.createElement("p")
         const description = document.createElement("p")
         const backButton = document.createElement("a")
+        const addToCartButton = document.createElement("button")
+        const goToCartButton = document.createElement("button")
 
         productDiv.className = 'main-container'
         image.className = 'img-products'
@@ -27,6 +29,8 @@ async function fetchAndCreateProduct() {
         price.className = 'description'
         description.className = 'description'
         backButton.className = 'cta'
+        addToCartButton.className = 'cta'
+        goToCartButton.className = 'cta'
 
         image.src = product.image.url
         image.alt = product.image.alt
@@ -35,12 +39,34 @@ async function fetchAndCreateProduct() {
         description.textContent = product.description
         backButton.textContent = 'Back to products'
         backButton.href = '/index.html'
+        addToCartButton.textContent = 'Add to cart'
+        goToCartButton.textContent = 'Go to cart'
+
+        addToCartButton.addEventListener('click', () => {
+            let cart = JSON.parse(localStorage.getItem('cart')) || []
+            cart.push({
+                id: product.id,
+                title: product.title,
+                price: product.price,
+                image: product.image.url,
+                alt: product.image.alt,
+                quantity: 1
+            })
+            localStorage.setItem('cart', JSON.stringify(cart))
+            alert('Product added to cart!')
+        })
+
+        goToCartButton.addEventListener('click', () => {
+            window.location.href= "check-out.html"
+        }) 
 
 
         productDiv.appendChild(image)
         productDiv.appendChild(title)
         productDiv.appendChild(price)
         productDiv.appendChild(description)
+        productDiv.appendChild(addToCartButton)
+        productDiv.appendChild(goToCartButton)
         productDiv.appendChild(backButton)
        
         container.appendChild(productDiv)

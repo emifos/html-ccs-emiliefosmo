@@ -10,9 +10,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <title>RainyDays | Cart</title>
+    <title>RainyDays | Checkout</title>
     <script src="https://kit.fontawesome.com/6c23741275.js" crossorigin="anonymous"></script>
     <link href="css/styles.css" rel="stylesheet"/>
+    <script defer src="js/check-out.js"></script>
 </head>
 <body>
     <div class="top-banner"></div>
@@ -37,13 +38,15 @@
             </div>
        </section>
        <section class= "cart-header">
-            <h1 class="cta">Your cart</h1> 
+            <h1>Your cart</h1> 
        </section>
-
-    <main>
-      
+    <main class="check-out-container">
+      <div id="cart-container"></div>
+        <div id="cart-summary">
+            <p id="total-price">Total: 0 $</p>
+            <button id="checkout-button">Complete purchase</button>
+        </div>
     </main>
-
     <footer>
         <a href="coming-soon.html">
             <ul class="footer-text">

@@ -1,0 +1,54 @@
+const cartContainer = document.getElementById("cart-container")
+const totalPriceEl = document.getElementById("total-price")
+const checkoutButton = document.getElementById("checkout-button")
+
+let cart = JSON.parse(localStorage.getItem("cart")) || []
+
+function renderCart() {
+    cartContainer.innerHTML = ""
+
+    if (cart.lenght === 0) {
+        cartContainer.innerHTML = "<p>Your cart is empty.</p>"
+        totalPriceEl.textContent = "Total: 0 $"
+        checkoutButton.style.display = "none"
+        return
+    }
+
+    let total = 0
+
+    cart.forEach((product, index) => {
+        const item = document.createElement("div")
+        item.className = "cart-item"
+
+        item.innerHTML = `
+            <img src="${product.image}" alt="${product.alt}" width="100">
+            <div>
+                <h2>${product.title}</h2>
+                <p>Price: ${product.price} $</p>
+                <button class="remove-button" data-index="${index}">Remove</button>
+            </div>
+        `
+
+        cartContainer.appendChild(item)
+        total += product.price
+       
+    })
+
+    totalPriceEl.textContent = `Total: ${total} $`
+
+    document.querySelectorAll(".remove-button").forEach(button => {
+        button.addEventListener("click", (e) => {
+            const indexToRemove = e.target.dataset.index
+            cart.splice(indexToRemove, 1)
+            localStorage.setItem("cart", JSON.stringify(cart))
+            renderCart()
+        })
+    })
+}
+
+checkoutButton.addEventListener("click", () => {
+    localStorage.removeItem("cart")
+    window.location.href = "confirmation.html"
+})
+
+renderCart()
