@@ -188,6 +188,22 @@ body{
     padding:0;
 }
 
+.cart-icon {
+    position: relative;
+}
+
+.cart-count {
+    position: absolute;
+    top: -6px;
+    right: -5px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 0.65rem;
+    font-family: poppins;
+}
+
 /* Home page */
 .home-header{
     background-image: url('../images/red-mountain.jpg');
@@ -244,7 +260,6 @@ body{
 .h3{
     padding-left: 50px;
 }
-
 
 /* Product details page*/
 .img-details{
@@ -452,6 +467,18 @@ body{
     margin-top: 10px;
     margin-bottom: 5px;
 }
+
+.confirmation-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;     
+  font-family: poppins;
+  margin: 80px 0px;
+  
+  
+}
+
 
 /* Product-page*/
 

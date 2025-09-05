@@ -44,6 +44,12 @@ async function fetchAndCreateProduct() {
 
         addToCartButton.addEventListener('click', () => {
             let cart = JSON.parse(localStorage.getItem('cart')) || []
+
+            const existingProductIndex = cart.findIndex(item => item.id === product.id)
+            if (existingProductIndex !== -1) {
+                cart[existingProductIndex].quantity += 1
+            } else {
+            
             cart.push({
                 id: product.id,
                 title: product.title,
@@ -52,9 +58,13 @@ async function fetchAndCreateProduct() {
                 alt: product.image.alt,
                 quantity: 1
             })
-            localStorage.setItem('cart', JSON.stringify(cart))
+        }
+        
+        localStorage.setItem('cart', JSON.stringify(cart))
+
+            updateCartCount()
             alert('Product added to cart!')
-        })
+            })
 
         goToCartButton.addEventListener('click', () => {
             window.location.href= "check-out.html"
@@ -77,6 +87,21 @@ async function fetchAndCreateProduct() {
     }
 }
 
+function updateCartCount() {
+    const cart = JSON.parse(localStorage.getItem("cart")) || []
+    const countElement = document.getElementById("cart-count")
+    if (!countElement) return
+
+    const totalQuantity = cart.reduce((sum, item) => sum + item.quantity, 0)
+    if (totalQuantity === 0) {
+        countElement.style.display = "none"
+    } else {
+        countElement.textContent = totalQuantity
+        countElement.style.display = "inline-block"
+    }
+}
+
 fetchAndCreateProduct()
+updateCartCount()
 
 
