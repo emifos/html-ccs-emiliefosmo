@@ -1,5 +1,9 @@
 const container = document.querySelector("#container")
 const API_URL = "https://v2.api.noroff.dev/rainy-days"
+const pathParts = window.location.pathname.split('/')
+const repo = pathParts[1] || ''
+const basePath = repo ? `/${repo}` : ''
+
 
 async function fetchAndCreateProduct() {
     try {
@@ -10,6 +14,12 @@ async function fetchAndCreateProduct() {
             container.textContent = "No product ID provided!"
             return
         }
+
+        const pathParts = window.location.pathname.split('/').filter(Boolean)
+        const repo = pathParts.length > 0 ? pathParts[0] : ''
+        const isLocal = repo.includes('.html') 
+        const basePath = isLocal ? '' : `/${repo}`
+
         const response = await fetch(`${API_URL}/${id}`)
         const data = await response.json()
         const product = data.data
@@ -38,7 +48,8 @@ async function fetchAndCreateProduct() {
         price.textContent = `$${product.price}`
         description.textContent = product.description
         backButton.textContent = 'Back to products'
-        backButton.href = 'index.html'
+        backButton.href = `${basePath}/index.html`
+
         addToCartButton.textContent = 'Add to cart'
         goToCartButton.textContent = 'Go to cart'
 
