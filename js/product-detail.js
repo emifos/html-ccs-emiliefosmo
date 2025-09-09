@@ -38,7 +38,7 @@ async function fetchAndCreateProduct() {
         price.textContent = `$${product.price}`
         description.textContent = product.description
         backButton.textContent = 'Back to products'
-        backButton.href = '/index.html'
+        backButton.href = 'index.html'
         addToCartButton.textContent = 'Add to cart'
         goToCartButton.textContent = 'Go to cart'
 
