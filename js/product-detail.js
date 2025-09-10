@@ -24,11 +24,18 @@ async function fetchAndCreateProduct() {
         const data = await response.json()
         const product = data.data
 
+        console.log(product)
+
         const productDiv = document.createElement("div")
         const image = document.createElement("img")
         const title = document.createElement("h2")
         const price = document.createElement("p")
+        const discountedPrice = document.createElement("p")
+        const onSale = document.createElement("p")
         const description = document.createElement("p")
+        const gender = document.createElement("p")
+        const size = document.createElement("p")
+        const baseColor = document.createElement("p")
         const backButton = document.createElement("a")
         const addToCartButton = document.createElement("button")
         const goToCartButton = document.createElement("button")
@@ -37,7 +44,12 @@ async function fetchAndCreateProduct() {
         image.className = 'img-products'
         title.className = 'description'
         price.className = 'description'
+        discountedPrice.className = 'description'
+        onSale.className = 'description'
         description.className = 'description'
+        gender.className = 'description'
+        size.className = 'description'
+        baseColor.className = 'description'
         backButton.className = 'cta'
         addToCartButton.className = 'cta'
         goToCartButton.className = 'cta'
@@ -45,8 +57,27 @@ async function fetchAndCreateProduct() {
         image.src = product.image.url
         image.alt = product.image.alt
         title.textContent = product.title
-        price.textContent = `$${product.price}`
+
+        if (product.onSale && product.discountedPrice < product.price) {
+            price.innerHTML = `<span style="text-decoration: line-through; color: gray;">$${product.price}</span`
+            discountedPrice.innerHTML = `<strong style="color: red;">Now: $${product.discountedPrice}</strong>`
+            onSale.textContent = `On Sale: Yes`
+        } else {
+            price.textContent = `$${product.price}`
+            discountedPrice.textContent = ''
+            onSale.textContent = `On sale: No`
+        }
+
         description.textContent = product.description
+        gender.textContent = `Gender: ${product.gender || "N/A"}`
+        baseColor.textContent = `Base Color: ${product.baseColor || "N/A"}`
+
+        if (Array.isArray(product.sizes)){
+            size.textContent = `Sizes: ${product.sizes.join(',')}`
+        } else {
+            size.textContent = `Size: ${product.size || "N/A"}`
+        }
+
         backButton.textContent = 'Back to products'
         backButton.href = `${basePath}/index.html`
 
@@ -65,6 +96,7 @@ async function fetchAndCreateProduct() {
                 id: product.id,
                 title: product.title,
                 price: product.price,
+                discountedPrice: product.discountedPrice,
                 image: product.image.url,
                 alt: product.image.alt,
                 quantity: 1
@@ -85,7 +117,12 @@ async function fetchAndCreateProduct() {
         productDiv.appendChild(image)
         productDiv.appendChild(title)
         productDiv.appendChild(price)
+        productDiv.appendChild(discountedPrice)
+        productDiv.appendChild(onSale)
         productDiv.appendChild(description)
+        productDiv.appendChild(gender)
+        productDiv.appendChild(size)
+        productDiv.appendChild(baseColor)
         productDiv.appendChild(addToCartButton)
         productDiv.appendChild(goToCartButton)
         productDiv.appendChild(backButton)
