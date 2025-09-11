@@ -1,3 +1,4 @@
+import { showLoading, hideLoading } from "./loading.js"
 const cartContainer = document.getElementById("cart-container")
 const totalPriceEl = document.getElementById("total-price")
 const checkoutButton = document.getElementById("checkout-button")
@@ -5,12 +6,14 @@ const checkoutButton = document.getElementById("checkout-button")
 let cart = JSON.parse(localStorage.getItem("cart")) || []
 
 function renderCart() {
+    showLoading()
     cartContainer.innerHTML = ""
 
-    if (cart.lenght === 0) {
+    if (cart.length === 0) {
         cartContainer.innerHTML = "<p>Your cart is empty.</p>"
         totalPriceEl.textContent = "Total: 0 $"
         checkoutButton.style.display = "none"
+        hideLoading()
         return
     }
 
@@ -34,7 +37,7 @@ function renderCart() {
        
     })
 
-    totalPriceEl.textContent = `Total: ${total} $`
+    totalPriceEl.textContent = `Total: ${total.toFixed(2)} $`
 
     document.querySelectorAll(".remove-button").forEach(button => {
         button.addEventListener("click", (e) => {
@@ -44,6 +47,8 @@ function renderCart() {
             renderCart()
         })
     })
+
+    hideLoading()
 }
 
 checkoutButton.addEventListener("click", () => {

@@ -124,9 +124,10 @@ nav li:hover {
 }
 
 .description{
-    font-family:open sans;
+    font-family: poppins;
     color: #0A3641;
     text-decoration: none;
+    margin: 5px 0px;
 }
 
 label, .dropdown{
@@ -539,6 +540,9 @@ select{
     border: 1px solid #ECF2F5;
     padding: 20px;
     text-align: center;
+    width: 300px;
+    height: 500px;
+
  
 }
 
