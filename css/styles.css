@@ -999,3 +999,52 @@ summary{
   align-items: center;
   z-index: 9999;
 }
+
+/* error styling and add to cart-styling alert */
+.error-message {
+  background-color: #ffe0e0;
+  color: #a00;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+#message-container {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  width: auto;
+  max-width: 90%;
+  pointer-events: none; 
+}
+
+.styled-alert {
+  background-color: #0A437A;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  font-weight: 600;
+  font-size: 1rem;
+  pointer-events: all; 
+  animation: fadeInOut 3s forwards;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  10%, 90% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}

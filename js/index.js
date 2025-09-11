@@ -14,7 +14,11 @@ try {
    renderProducts(allProducts)
 }   catch(error) {
     console.error("Failed to fetch products", error)
-    container.textContent = 'Failed to load product'
+    container.innerHTML= `
+    <div class="error-message">
+    <p>Something went wrong while loading product.</p>
+    <p>Please try again later.</p>
+    </div>`
     } finally {
         hideLoading()
     }

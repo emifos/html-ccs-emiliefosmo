@@ -1,10 +1,21 @@
 import { showLoading, hideLoading } from "./loading.js"
 const container = document.querySelector("#container")
+const messageContainer = document.getElementById("message-container")
 const API_URL = "https://v2.api.noroff.dev/rainy-days"
 const pathParts = window.location.pathname.split('/')
 const repo = pathParts[1] || ''
 const basePath = repo ? `/${repo}` : ''
 
+function showMessage(message, duration = 3000) {
+    messageContainer.innerHTML = `
+    <div class="styled-alert">
+    ${message}
+    </div>
+    `
+    setTimeout(() => {
+        messageContainer.innerHTML =''
+    }, duration)
+}
 
 async function fetchAndCreateProduct() {
     showLoading()
@@ -106,7 +117,7 @@ async function fetchAndCreateProduct() {
         localStorage.setItem('cart', JSON.stringify(cart))
 
             updateCartCount()
-            alert('Product added to cart!')
+            showMessage('Product added to cart!')
             })
 
         goToCartButton.addEventListener('click', () => {
@@ -130,7 +141,11 @@ async function fetchAndCreateProduct() {
         container.appendChild(productDiv)
     } catch (error) {
         console.error("Failed to fetch product", error)
-        container.textContent = 'Failed to load product'
+        container.innerHTML= `
+        <div class="error-message">
+        <p>Something went wrong while loading product.</p>
+        <p>Please try again later.</p>
+        </div>`
     } finally {
         hideLoading()
     }
