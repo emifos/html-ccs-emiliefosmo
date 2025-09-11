@@ -254,6 +254,8 @@ body{
     object-position: bottom;
     height: auto;
     width: 100%;
+    max-width: 300px;
+    min-width: 100px;
 }
 
 .h3{
