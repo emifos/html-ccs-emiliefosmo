@@ -539,10 +539,8 @@ select{
 .product-item, .item {
     border: 1px solid #ECF2F5;
     padding: 20px;
-    text-align: center;
+    text-align:center;
     height: 500px;
-
- 
 }
 
 .container-home{
