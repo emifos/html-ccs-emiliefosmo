@@ -261,6 +261,13 @@ body{
     padding-left: 50px;
 }
 
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin: 20px 40px;
+}
+
 /* Product details page*/
 .img-details{
 
@@ -291,6 +298,8 @@ body{
 .product-head, .options{
     margin:10px ;
 }
+
+
 
 /*Cart page*/
 
@@ -971,4 +980,18 @@ summary{
     
    
 
+}
+
+/*loading*/
+
+#loading {
+  display: none; 
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  font-size: 2rem;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
 }

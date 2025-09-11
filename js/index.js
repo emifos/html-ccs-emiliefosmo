@@ -1,9 +1,11 @@
+import { showLoading, hideLoading } from "./loading.js"
 const container = document.querySelector("#container")
 const genderFilter = document.querySelector("#genderFilter")
 const API_URL = "https://v2.api.noroff.dev/rainy-days"
 let allProducts = []
 
 async function fetchAndCreateProducts() {
+    showLoading()
 try {
     const response = await fetch (API_URL);
     const data = await response.json();
@@ -13,6 +15,8 @@ try {
 }   catch(error) {
     console.error("Failed to fetch products", error)
     container.textContent = 'Failed to load product'
+    } finally {
+        hideLoading()
     }
 }
 
@@ -73,9 +77,9 @@ function updateCartCount() {
     }
 }
 
+
 fetchAndCreateProducts()
 updateCartCount()
-
 
 
 

@@ -1,3 +1,4 @@
+import { showLoading, hideLoading } from "./loading.js"
 const container = document.querySelector("#container")
 const API_URL = "https://v2.api.noroff.dev/rainy-days"
 const pathParts = window.location.pathname.split('/')
@@ -6,6 +7,7 @@ const basePath = repo ? `/${repo}` : ''
 
 
 async function fetchAndCreateProduct() {
+    showLoading()
     try {
         const params = new URLSearchParams(window.location.search)
         const id = params.get("id")
@@ -23,8 +25,6 @@ async function fetchAndCreateProduct() {
         const response = await fetch(`${API_URL}/${id}`)
         const data = await response.json()
         const product = data.data
-
-        console.log(product)
 
         const productDiv = document.createElement("div")
         const image = document.createElement("img")
@@ -59,7 +59,7 @@ async function fetchAndCreateProduct() {
         title.textContent = product.title
 
         if (product.onSale && product.discountedPrice < product.price) {
-            price.innerHTML = `<span style="text-decoration: line-through; color: gray;">$${product.price}</span`
+            price.innerHTML = `<span style="text-decoration: line-through; color: gray;">$${product.price}</span>`
             discountedPrice.innerHTML = `<strong style="color: red;">Now: $${product.discountedPrice}</strong>`
             onSale.textContent = `On Sale: Yes`
         } else {
@@ -128,10 +128,11 @@ async function fetchAndCreateProduct() {
         productDiv.appendChild(backButton)
        
         container.appendChild(productDiv)
-    }   catch (error) {
+    } catch (error) {
         console.error("Failed to fetch product", error)
         container.textContent = 'Failed to load product'
-
+    } finally {
+        hideLoading()
     }
 }
 
