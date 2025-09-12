@@ -20,6 +20,13 @@ function renderCart() {
     let total = 0
 
     cart.forEach((product, index) => {
+        const priceToUse = (product.discountedPrice && product.discountedPrice < product.price)
+        ? product.discountedPrice
+        : product.price
+
+        const itemTotal = priceToUse * product.quantity
+        total += itemTotal
+
         const item = document.createElement("div")
         item.className = "cart-item"
 
@@ -27,30 +34,64 @@ function renderCart() {
             <img src="${product.image}" alt="${product.alt}" width="100">
             <div>
                 <h2>${product.title}</h2>
-                <p>Price: ${product.price} $</p>
+                <p>Unit price: ${priceToUse.toFixed(2)} $</p>
+                <p>
+                    Quantity:
+                    <button class="decrease" data-index="${index}">-</button>
+                    <span>${product.quantity}</span>
+                    <button class="increase" data-index="${index}">+</button>
+                </p>
+                <p>Total: ${itemTotal.toFixed(2)} $</p>
                 <button class="remove-button" data-index="${index}">Remove</button>
             </div>
         `
 
         cartContainer.appendChild(item)
-        total += product.price
        
     })
 
     totalPriceEl.textContent = `Total: ${total.toFixed(2)} $`
+    checkoutButton.style.display = "block"
 
-    document.querySelectorAll(".remove-button").forEach(button => {
+    document.querySelectorAll(".increase").forEach(button => {
         button.addEventListener("click", (e) => {
-            const indexToRemove = e.target.dataset.index
-            cart.splice(indexToRemove, 1)
+            const index = e.target.dataset.index
+            cart[index].quantity += 1
             localStorage.setItem("cart", JSON.stringify(cart))
             renderCart()
+            updateCartCount()
+        })
+    }) 
+
+    document.querySelectorAll(".decrease").forEach(button => {
+        button.addEventListener("click", (e) => {
+            const index = e.target.dataset.index
+            if (cart[index].quantity > 1) {
+                cart[index].quantity -= 1 
+            } else {
+                cart.splice(index, 1)
+            }
+            localStorage.setItem("cart", JSON.stringify(cart))
+            renderCart()
+            updateCartCount()
+            
         })
     })
+
+document.querySelectorAll(".remove-button").forEach(button => {
+    button.addEventListener("click", (e) => {
+        const index = e.target.dataset.index
+        cart.splice(index, 1)
+        localStorage.setItem("cart", JSON.stringify(cart))
+        renderCart()
+        updateCartCount()
+    })
+})
 
     hideLoading()
 }
 
+    
 checkoutButton.addEventListener("click", () => {
     localStorage.removeItem("cart")
     window.location.href = "confirmation.html"

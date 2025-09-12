@@ -102,26 +102,24 @@ async function fetchAndCreateProduct() {
             if (existingProductIndex !== -1) {
                 cart[existingProductIndex].quantity += 1
             } else {
-            
-            cart.push({
-                id: product.id,
-                title: product.title,
-                price: product.price,
-                discountedPrice: product.discountedPrice,
-                image: product.image.url,
-                alt: product.image.alt,
-                quantity: 1
+                cart.push({
+                    id: product.id,
+                    title: product.title,
+                    price: product.price,
+                    discountedPrice: product.discountedPrice,
+                    image: product.image.url,
+                    alt: product.image.alt,
+                    quantity: 1
             })
         }
         
         localStorage.setItem('cart', JSON.stringify(cart))
-
             updateCartCount()
             showMessage('Product added to cart!')
             })
 
         goToCartButton.addEventListener('click', () => {
-            window.location.href= "check-out.html"
+            window.location.href= `${basePath}/check-out.html`
         }) 
 
 
